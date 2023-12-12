@@ -45,13 +45,30 @@ public class Main {
                     switch (result[1]){
                         case "red" -> redCubes += Integer.parseInt(result[0]);
                         case "blue" -> blueCubes += Integer.parseInt(result[0]);
-                        case "green" -> greenCubes += Integer.parseInt(result[0]);
-                    }
+                        case "green" -> greenCubes += Integer.parseInt(result[0]);}
                 }
             }
 
             return redCubes <= this.redCubes && greenCubes <= this.greenCubes && blueCubes <= this.blueCubes;
         }
+
+        public static class Game {
+            private int ID;
+            private String[] attemps;
+            public Game(int ID, String[] attemps){
+                this.attemps = attemps;
+                this.ID = ID;
+            }
+
+            public int getID() {
+                return this.ID;
+            }
+
+            public String[] getAttemps() {
+                return attemps;
+            }
+        }
+
     }
 }
 

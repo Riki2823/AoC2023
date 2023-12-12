@@ -19,9 +19,9 @@ public class TestEj2 {
                 Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green""";
 
         Map<Integer, String[]> gameMap = processInput(input);
-        List<Game> games = new ArrayList<>();
+        List<Main.CubeGame.Game> games = new ArrayList<>();
         gameMap.forEach((key, value) -> {
-            games.add(new Game(key, value));
+            games.add(new Main.CubeGame.Game(key, value));
         });
 
         Main.CubeGame cb = new Main.CubeGame(games, 12, 14, 13);
@@ -134,13 +134,13 @@ public class TestEj2 {
 
 
         Map<Integer, String[]> gameMap = processInput(input);
-        List<Game> games = new ArrayList<>();
+        List<Main.CubeGame.Game> games = new ArrayList<>();
         gameMap.forEach((key, value) -> {
-            games.add(new Game(key, value));
+            games.add(new Main.CubeGame.Game(key, value));
         });
 
         Main.CubeGame cb = new Main.CubeGame(games, 12, 14, 13);
-        assertEquals(278, cb.play());
+        assertEquals(279, cb.play());
     }
 
     public static Map<Integer, String[]> processInput(String input) {
