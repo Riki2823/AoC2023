@@ -2,6 +2,7 @@ package villanueva.ricardo.Day2;
 
 import org.apache.commons.lang3.StringUtils;
 
+import java.sql.SQLOutput;
 import java.util.List;
 
 public class Main {
@@ -43,9 +44,22 @@ public class Main {
                 for (String v: values){
                     String[] result = StringUtils.splitByWholeSeparator(v, " ");
                     switch (result[1]){
-                        case "red" -> redCubes += Integer.parseInt(result[0]);
-                        case "blue" -> blueCubes += Integer.parseInt(result[0]);
-                        case "green" -> greenCubes += Integer.parseInt(result[0]);}
+                        case "red" -> {
+                            if (Integer.parseInt(result[0]) >= redCubes){
+                                redCubes = Integer.parseInt(result[0]);
+                            }
+                        }
+                        case "blue" -> {
+                            if (Integer.parseInt(result[0]) >= blueCubes){
+                                blueCubes = Integer.parseInt(result[0]);
+                            }
+                        }
+                        case "green" -> {
+                            if (Integer.parseInt(result[0]) >= greenCubes){
+                                greenCubes = Integer.parseInt(result[0]);
+                            }
+                        }
+                    }
                 }
             }
 

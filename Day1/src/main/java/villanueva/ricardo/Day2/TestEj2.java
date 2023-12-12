@@ -140,7 +140,7 @@ public class TestEj2 {
         });
 
         Main.CubeGame cb = new Main.CubeGame(games, 12, 14, 13);
-        assertEquals(279, cb.play());
+        assertEquals(2416, cb.play());
     }
 
     public static Map<Integer, String[]> processInput(String input) {
