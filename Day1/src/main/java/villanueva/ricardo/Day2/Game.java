@@ -8,4 +8,11 @@ public class Game {
         this.ID = ID;
     }
 
+    public int getID() {
+        return this.ID;
+    }
+
+    public String[] getAttemps() {
+        return attemps;
+    }
 }

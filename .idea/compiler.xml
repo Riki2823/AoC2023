@@ -3,6 +3,7 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
       <module name="Code" target="17" />
+      <module name="Day1" target="17" />
       <module name="Day1.main" target="17" />
       <module name="Day1.test" target="17" />
     </bytecodeTargetLevel>
