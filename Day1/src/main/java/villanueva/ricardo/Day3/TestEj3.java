@@ -173,6 +173,6 @@ public class TestEj3 {
 
         String[] lines = input.split("\n");
         GLEngine gle = new GLEngine(lines);
-        assertEquals(4361, gle.fix());
+        assertEquals(572196, gle.fix());
     }
 }

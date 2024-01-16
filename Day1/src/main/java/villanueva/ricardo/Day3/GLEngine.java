@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GLEngine {
-    private String[] lines;
+    private final String[] lines;
 
     public GLEngine(String[] lines){
         this.lines = lines;
@@ -62,8 +62,8 @@ public class GLEngine {
                 isAbjacent = true;
             }
         }
-        String up = "";
-        String down = "";
+        String up;
+        String down;
         if (linePosition != 0){
             int lastPositionLine = lines[linePosition - 1].length() - 1;
             if (position0 == 0 && positions.get(positions.size()-1) == lastPositionLine){
@@ -82,16 +82,16 @@ public class GLEngine {
                 }
             }
         }
-        if (linePosition != lines.length-1){
+        if (linePosition != lines.length-1){//TODO CAMBIAR LAS COSAS POR AQUI
             int lastPositionLine = lines[linePosition + 1].length() - 1;
             if (position0 == 0 && positions.get(positions.size()-1) == lastPositionLine){
                 down = lines[linePosition +1].substring(position0, lastPositionLine);
             } else if (position0 != 0 && positions.get(positions.size()-1) == lastPositionLine) {
                 down = lines[linePosition +1].substring(position0 -1, lastPositionLine);
             } else if (position0 == 0 && positions.get(positions.size() - 1) != lastPositionLine) {
-                down = lines[linePosition +1].substring(position0, lastPositionLine +1);
+                down = lines[linePosition +1].substring(position0, positions.get(positions.size()-1) +1);
             }else {
-                down = lines[linePosition +1].substring(position0 -1, lastPositionLine +1);
+                down = lines[linePosition +1].substring(position0 -1, positions.get(positions.size()-1) +1);
             }
             char[] downChars = down.toCharArray();
             for (char c: downChars){
